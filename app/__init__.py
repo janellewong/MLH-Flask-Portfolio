@@ -10,12 +10,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
 
-<<<<<<< HEAD
 
 
 
-=======
-@app.route('/test')
-def index_test():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
->>>>>>> 3b4b148f948a1b7b9079917c19c38773699d4966
