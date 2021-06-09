@@ -1,0 +1,43 @@
+/* #social_icon {
+    color: #686b6f;
+}
+#break_line {
+    border: none;
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+#arrow_up {
+    font-size: 2.5rem;
+    color: #686b6f;
+}
+#arrow_up:hover {
+    padding: 0px 2px 0px 2px;
+    background-color: #bbbaba;
+    color: #f0f0f0;
+    transition: background-color 0.2s;
+    transition: padding 0.1s;
+} */
+
+
+/* in index.html */
+
+/* <!-- <div class="profile">
+                    <div id="profile-picture" class="profile-picture">
+                        <img src="./assets/img/logo.jpg">
+                    </div>
+                    <h1>{{ site.title }}</h1>
+                </div>
+
+                <div id="footer_body">
+                    <footer class="mh-100">
+                        <p class="text-center">
+                            <a href=#profile-picture><i id="arrow_up" class="fas fa-angle-up "></i></a>
+                        </p>
+                        {% include smedialinks.html %}
+                        <hr id="break_line">
+                        <p class="text-center"> Let's Connect </p>
+                    </footer>
+                </div> --> */

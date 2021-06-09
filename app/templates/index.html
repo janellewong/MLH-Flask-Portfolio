@@ -15,39 +15,46 @@
         rel="stylesheet">
 
     <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+    <link lang='sass' rel="stylesheet" href="./static/styles/background.css">
+    <link lang='sass' rel="stylesheet" href="./static/styles/footer.css">
+    
     <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
     <title>{{ title }}</title>
 </head>
 
 
 <body>
-    <header class="profile">
-        <div id= titleIntro> 
-        <h1>Hello! I'm Bob</h1>
-        <h2>Welcome to my Portfolio</h2>
-    </div>
+    <div class="intro">
+        <header class="profile">
+            <div id= titleIntro>
+                <h1 style="font-size: 5vw">Hello! I'm Bob</h1>
+                <h2>Welcome to my Portfolio</h2>
 
-    <ul id= sub-nav>
-        <li>
-            <a href="#about">About</a>
-        </li>
+            </div>
+            
+        <ul id= sub-nav>
+            <li>
+                <a href="#about">About</a>
+            </li>
 
-        <li>
-            <a href="#experience">Experience</a>
-        </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
 
-        <li>
-            <a href="#projects">Projects</a>
-        </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
 
-        <li>
-            <a href="#contact">Contact</a>
-        </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
 
-    </ul>
+        </ul>
 
-    </header>
+        </header>
+    </div>  
 
+    
     {% if section %}
     <script>
         $(function() {
@@ -56,27 +63,101 @@
     </script>
     {% endif %}
 
+    {% if section %}
+    <script>
+        $(function() {
+           $("html, body").animate({ scrollTop: $("#{{ experience }}").offset().top }, 500);
+        });
+    </script>
+    {% endif %}
+
+    {% if section %}
+    <script>
+        $(function() {
+           $("html, body").animate({ scrollTop: $("#{{ projects }}").offset().top }, 500);
+        });
+    </script>
+    {% endif %}
+
+    {% if section %}
+    <script>
+        $(function() {
+           $("html, body").animate({ scrollTop: $("#{{ contact }}").offset().top }, 500);
+        });
+    </script>
+    {% endif %}
+
     <div>
-        <h1>test</h1>
+        <div id="container">
+            <div id="about"><h1>About</h1>
+                <p>Cake or pie? I can tell a lot about you by which one you pick. 
+                    It may seem silly, but cake people and pie people are really different. 
+                    I know which one I hope you are, but that's not for me to decide. So, 
+                    what is it? Cake or pie?
+                    She looked at her little girl who was about to become a teen. 
+                    She tried to think back to when the girl had been younger but 
+                    failed to pinpoint the exact moment when she had become a little 
+                    too big to pick up and carry. It hit her all at once. She was no longer 
+                    a little girl and she stood there speechless with fear, sadness, and pride 
+                    all running through her at the same time.</p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+
+
+            </div>
+
+
+
+
+            <div id="experience"><h1>Experience</h1>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+            </div>
+
+            <div id="projects"><h1>Projects</h1>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+                <p> blah </p>
+            </div>
+            <div id="contact">
+                <p> insert contact footer with icons here </p>
+
+                
+            </div>
+                
+
+        </div>
     </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div id=about href="about.html">
-        <h1>hello world</h1>
-    </div>
+
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+
 
 </body>
 </html>

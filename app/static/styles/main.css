@@ -2,6 +2,10 @@ p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #222230;
     background-size: cover;
@@ -9,44 +13,6 @@ body {
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
-}
-
-.nav-bar {
-    width: 100%;
-    display: inline-block;
-    background-color: #222230;
-    font-family: "Roboto", serif;
-    font-weight: 700 !important;
-    padding-top: 10px;
-}
-
-.nav-content .logo-touch-target {
-    display: inline-flex;
-    height: 60%;
-    width: 350px;
-}
-
-.nav-content .nav-logo {
-    height: 60px;
-    margin: auto;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-logo img {
-    width: 200px;
-}
-
-.nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 0px;
-    padding-right: 0px;
 }
 
 .profile {
@@ -83,37 +49,42 @@ body {
     height: 200px;
 }
 
-.banner {
-    padding: 20px 0px 50px 0px;
-    height: 150px;
-    background-color: #1d539f;
-}
-
-.banner .logo {
-    max-width:180px;
-    max-height:60px;
-    width: auto;
-    height: auto;
-}
-
-.banner .title {
-    color: white;
-    font-size: 50px;
-    font-weight: 700;
-}
 
 #titleIntro {
-    top:30%; 
+    top:25%; 
     position:absolute; 
-    padding: 10px 20vw;
+    padding-left: 350px;
+    z-index: 1;
+    color: white;
+
 }
+
+/* #titleIntro h1 {
+    border-right: .15em solid white;
+    white-space: nowrap;
+    
+    letter-spacing: .15em;
+    animation: animated-text 4s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+
+}
+
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 420px;}
+}
+
+@keyframes animated-cursor{
+    from{border-right-color: white;}
+    to{border-right-color: transparent;}
+} */
 
 #sub-nav{
     top: 30%;
     list-style: none;
     right: 20%;
     position:absolute;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
     text-align: center;
     border-left: 3px solid white;
@@ -127,6 +98,63 @@ li{
 
 a{
     color:wheat;
+    text-decoration: none;
+    
 }
+
+a:hover {
+    color: white;
+  }
+
+
+.intro {
+    height: 100vh;
+    z-index: 1;
+}
+
+
+
+#about {
+    color: white;
+    position: center;
+    z-index: 1;
+    padding-top: 50px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    padding-left: 200px;
+}
+
+#experience {
+    color: white;
+    position: center;
+    z-index: 1;
+    padding-top: 50px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    padding-left: 200px;
+}
+
+#projects {
+    color: white;
+    position: center;
+    z-index: 1;
+    padding-top: 50px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    padding-left: 200px;
+}
+
+#contact {
+    color: white;
+    position: center;
+    z-index: 1;
+    padding-top: 50px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    padding-left: 200px;
+}
+
+
+
 
 
