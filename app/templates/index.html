@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/frontpage.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,32 +24,43 @@
 
 
 <body>
-    <header class="profile">
-        <div id= titleIntro> 
-        <h1>Hello! I'm Bob</h1>
-        <h2>Welcome to my Portfolio</h2>
+
+    <div class="background">
+        <header class="profile">
+            <div id= titleIntro> 
+            <h1>Hello! I'm Bob</h1>
+            <h2>Welcome to my Portfolio</h2>
+            </div>
+    
+        <ul id= sub-nav>
+            <li>
+                <a href="#about">About</a>
+            </li>
+    
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+    
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+    
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+    
+        </ul> 
+    
+        </header>
+
+        <video id=videobg autoplay loop muted>
+            <source src="{{ url_for('static', filename='purplevid.mp4') }}" type="video/mp4">
+        </video>
+
+
     </div>
 
-    <ul id= sub-nav>
-        <li>
-            <a href="#about">About</a>
-        </li>
-
-        <li>
-            <a href="#experience">Experience</a>
-        </li>
-
-        <li>
-            <a href="#projects">Projects</a>
-        </li>
-
-        <li>
-            <a href="#contact">Contact</a>
-        </li>
-
-    </ul>
-
-    </header>
+    
 
     {% if section %}
     <script>
@@ -56,27 +70,47 @@
     </script>
     {% endif %}
 
+    {% if section %}
+    <script>
+        $(function() {
+           $("html, body").animate({ scrollTop: $("#{{ experience }}").offset().top }, 500);
+        });
+    </script>
+    {% endif %}
+
+    {% if section %}
+    <script>
+        $(function() {
+           $("html, body").animate({ scrollTop: $("#{{ projects }}").offset().top }, 500);
+        });
+    </script>
+    {% endif %}
+
+    {% if section %}
+    <script>
+        $(function() {
+           $("html, body").animate({ scrollTop: $("#{{ contact }}").offset().top }, 500);
+        });
+    </script>
+    {% endif %}
+
     <div>
-        <h1>test</h1>
+        <div id="container">
+            <div id="about"><h1>About</h1>
+
+            </div>
+
+
+
+
+            <div id="experience"><h1>Experience</h1></div>
+            <div id="projects"><h1>Projects</h1></div>
+            <div id="contact"><h1>Contact</h1></div>
+
+        </div>
     </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div>
-        <h1>test</h1>
-    </div>
-    <div id=about href="about.html">
-        <h1>hello world</h1>
-    </div>
+
+
 
 </body>
 </html>
