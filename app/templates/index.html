@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head>   
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta property="og:title" content="Personal Portfolio">
     <meta property="og:description" content="My Personal Portfolio">
     <meta property="og:url" content="{{ url }}">
-
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -17,21 +19,22 @@
     <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
     <link lang='sass' rel="stylesheet" href="./static/styles/background.css">
     <link lang='sass' rel="stylesheet" href="./static/styles/footer.css">
-    
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+
     <title>{{ title }}</title>
+    
+    
 </head>
 
 
 <body>
     <div class="intro">
         <header class="profile">
-            <div id= titleIntro>
+            <div class="titleIntro anim-type">
                 <h1 style="font-size: 5vw">Hello! I'm Bob</h1>
-                <h2>Welcome to my Portfolio</h2>
-
             </div>
-            
+            <h2>Welcome to my Portfolio</h2>
+        
+    <div class="slideAnim" >
         <ul id= sub-nav>
             <li>
                 <a href="#about">About</a>
@@ -50,7 +53,7 @@
             </li>
 
         </ul>
-
+    </div>
         </header>
     </div>  
 
@@ -89,57 +92,35 @@
 
     <div>
         <div id="container">
-            <div id="about"><h1>About</h1>
-                <p>Cake or pie? I can tell a lot about you by which one you pick. 
-                    It may seem silly, but cake people and pie people are really different. 
-                    I know which one I hope you are, but that's not for me to decide. So, 
-                    what is it? Cake or pie?
-                    She looked at her little girl who was about to become a teen. 
-                    She tried to think back to when the girl had been younger but 
-                    failed to pinpoint the exact moment when she had become a little 
-                    too big to pick up and carry. It hit her all at once. She was no longer 
-                    a little girl and she stood there speechless with fear, sadness, and pride 
-                    all running through her at the same time.</p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-
-
+            <div id="about">
+                {% include "about.html" %}
             </div>
 
-
-
-
             <div id="experience"><h1>Experience</h1>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
+                {% include "experience.html" %}
             </div>
 
             <div id="projects"><h1>Projects</h1>
                 <p> blah </p>
                 <p> blah </p>
                 <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
             </div>
+<br>
+<br>
+<br>
+<br>
             <div id="contact">
-                <p> insert contact footer with icons here </p>
-
-                
+                <p>remove this text when finished. just leads to the footer </p> <!-- Empty Space to lead to footer -->
             </div>
                 
 
         </div>
+    </div>
+
+    <div >
+    <nav class="navbar sticky-top navbar-light footer">
+        <a class="navbar-brand" href="https://www.google.ca/">Just a link that takes u to google irrelevant</a>
+      </nav>
     </div>
 
     <div class="firefly"></div>
