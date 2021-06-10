@@ -28,24 +28,25 @@ img{
 .profile {
     background-color: #222230 !important;
     text-align: center;
-    height: 320px;
+    height: 60vh;
     margin-bottom: 50px;
+    
 }
 
 .profile h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: white;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
 }
 
 .profile h2 {
     font-size: 20px;
     font-weight: 700;
     color: white;
-    top:40%; 
-    position:absolute; 
-    padding-left: 350px;
+    position: absolute; 
+    padding-left: 400px;
     z-index: 1;
+    
 }
 
 .profile img {
@@ -65,24 +66,25 @@ img{
 
 
 .titleIntro {
-  /*  top:25%; 
+    /* top:50%; 
     position:absolute; 
-    padding-left: 250px;
-    z-index: 1;
-     margin: 0 auto;
-    color: white; */
+    padding-left: 200px;
+    z-index: 1; */
+
+
+    color: white;
     position: relative;
     padding-left: 250px;
-      top: 60%;
-      width: 16em;   
-      border-right: 2px solid rgba(255, 255, 255, 0.75);
-      font-size: 180%;
-      text-align: center;
-      white-space: nowrap;
-      overflow: hidden;transform: translateY(-50%);
+    top: 60%;
+    width: 16em;   
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;transform: translateY(-50%);
 }
 
-
+/* make responsive */
  .anim-type {
     border-right: .15em solid white;
     white-space: nowrap;
@@ -95,7 +97,7 @@ img{
 
 @keyframes animated-text{
     from{width: 0;}
-    to{width: 750px;}
+    to{width: 820px;}
 }
 
 @keyframes animated-cursor{

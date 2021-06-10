@@ -19,6 +19,11 @@
     <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
     <link lang='sass' rel="stylesheet" href="./static/styles/background.css">
     <link lang='sass' rel="stylesheet" href="./static/styles/footer.css">
+    <link lang='sass' rel="stylesheet" href="./static/styles/experience.css">
+    <link lang='sass' rel="stylesheet" href="./static/styles/projects.css">
+    <link lang='sass' rel="stylesheet" href="./static/styles/footer.scss">
+
+
 
     <title>{{ title }}</title>
     
@@ -30,7 +35,7 @@
     <div class="intro">
         <header class="profile">
             <div class="titleIntro anim-type">
-                <h1 style="font-size: 5vw">Hello! I'm Bob</h1>
+                <h1 style="font-size: 5vw">Hello! I'm Bob. &#160;</h1>
             </div>
             <h2>Welcome to my Portfolio</h2>
         
@@ -97,13 +102,12 @@
             </div>
 
             <div id="experience"><h1>Experience</h1>
+                <br>
                 {% include "experience.html" %}
             </div>
 
             <div id="projects"><h1>Projects</h1>
-                <p> blah </p>
-                <p> blah </p>
-                <p> blah </p>
+                {% include "projects.html" %}
             </div>
 <br>
 <br>
@@ -118,9 +122,8 @@
     </div>
 
     <div >
-    <nav class="navbar sticky-top navbar-light footer">
-        <a class="navbar-brand" href="https://www.google.ca/">Just a link that takes u to google irrelevant</a>
-      </nav>
+        <!-- {% include "profile.html" %} -->
+        {% include "footer.html" %}
     </div>
 
     <div class="firefly"></div>

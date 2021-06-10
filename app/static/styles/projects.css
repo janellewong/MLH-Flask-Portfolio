@@ -1,0 +1,29 @@
+
+.accordion-button {
+    background-color: #353b48;
+    color: wheat;
+    padding: 1.5rem 1.5rem 1.25rem;
+    
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: #718093;
+    
+}
+
+.accordion-button:focus {
+    border-style: none;
+}
+
+.accordion-item {
+    background-color:transparent;
+}
+
+#projects {
+    color: #b2bec3;
+}
+
+/* .year {
+    color: white;
+} */
