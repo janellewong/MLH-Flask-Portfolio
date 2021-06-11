@@ -1,12 +1,13 @@
-# Flask-Blog
+# Hello! I'm Bob. (A personal website template)
 
-Minimal Flask template to get started on your blog application for MLH Fellowship Production Engineering track.
+This personal portfolio template is a minimalistic website that allows the user to display their Biography, Experiences, Projects, and Contact information. It contains small animations that are responsive and calming for the website viewer. 
  
+## Technologies Used
+This was coded in Python, HTML, and CSS using the Flask framework and also Bootstrap framework to style. 
 
-## Installation
+## How to run this website? 
 
 Make sure you have python3 and pip installed
-
 
 Create and activate virtual environment using virtualenv
 ```bash
@@ -34,4 +35,4 @@ $ flask run
 
 ## Contributors
 Janelle Wong 
-Ayesha
+Ayesha Arshed
