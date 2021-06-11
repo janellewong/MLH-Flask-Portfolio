@@ -35,4 +35,4 @@ $ flask run
 
 ## Contributors
 Janelle Wong 
-Ayesha Arshed
+Ayesha Arshad
