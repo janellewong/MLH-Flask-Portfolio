@@ -24,6 +24,6 @@
     color: #b2bec3;
 }
 
-/* .year {
-    color: white;
-} */
+#projectYear {
+    position:absolute;
+}

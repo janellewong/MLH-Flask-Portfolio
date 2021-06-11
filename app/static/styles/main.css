@@ -46,6 +46,7 @@ img{
     position: absolute; 
     padding-left: 400px;
     z-index: 1;
+    top:45%;
     
 }
 
@@ -66,12 +67,6 @@ img{
 
 
 .titleIntro {
-    /* top:50%; 
-    position:absolute; 
-    padding-left: 200px;
-    z-index: 1; */
-
-
     color: white;
     position: relative;
     padding-left: 250px;
@@ -196,12 +191,4 @@ a:hover {
     padding-bottom: 50px;
     padding-left: 200px;
 }
-
-.footer {
-    background-color:#6a6a92;
-}
-
-
-
-
 
