@@ -1,4 +1,4 @@
-# Hello! I'm Bob. (A personal website template)
+# Hello! I'm Bob.
 
 This personal portfolio template is a minimalistic website that allows the user to display their Biography, Experiences, Projects, and Contact information. It contains small animations that are responsive and calming for the website viewer. 
  
