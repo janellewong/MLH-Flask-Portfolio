@@ -92,7 +92,7 @@ img{
 
 @keyframes animated-text{
     from{width: 0;}
-    to{width: 820px;}
+    to{width: 940px;}
 }
 
 @keyframes animated-cursor{
