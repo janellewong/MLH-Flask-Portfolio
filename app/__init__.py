@@ -14,6 +14,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', title="Bob Zoldyck | Portfolio", url=os.getenv("URL"))
 
+@app.route('/health')
+def health():
+    return render_template('health.html', title="Bob Zoldyck | Portfolio", url=os.getenv("URL"))
+
 
 
 
