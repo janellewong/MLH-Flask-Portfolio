@@ -16,11 +16,11 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="Bob Zoldyck | Portfolio", url=os.getenv("URL"))
+    return render_template('main.html', title="Janelle Wong | Portfolio", url=os.getenv("URL"))
 
 @app.route('/health')
 def health():
-    return render_template('health.html', title="Bob Zoldyck | Portfolio", url=os.getenv("URL"))
+    return render_template('health.html', title="Janelle Wong | health", url=os.getenv("URL"))
 
 @app.route('/register', methods=('GET', 'POST'))
 def register():
@@ -49,9 +49,7 @@ def register():
         else:
             return error, 418
 
-    ## TODO: Return a restister page
-    return "Register Page not yet implemented", 501
-
+    return render_template('register.html', title="Janelle Wong | register", url=os.getenv("URL"))
 
 
 @app.route('/login', methods=('GET', 'POST'))
@@ -75,7 +73,6 @@ def login():
         else:
             return error, 418
     
-    ## TODO: Return a login page
-    return "Login Page not yet implemented", 501
+    return render_template('login.html', title="Janelle Wong | login", url=os.getenv("URL"))
 
 
