@@ -25,6 +25,13 @@ img{
     margin:auto; 
 }
 
+.hello-container {
+    position: centre;
+    padding-left: 15%;
+    padding-top: 20%;
+
+}
+
 .profile {
     background-color: #222230 !important;
     text-align: center;
@@ -34,6 +41,7 @@ img{
 }
 
 .profile h1 {
+    top: 30%;
     font-size: 50px;
     font-weight: 700;
     color: white;
@@ -43,8 +51,8 @@ img{
     font-size: 20px;
     font-weight: 700;
     color: white;
-    position: absolute; 
-    padding-left: 400px;
+    position: center; 
+    left: 5%;
     z-index: 1;
     top:45%;
     
@@ -69,7 +77,6 @@ img{
 .titleIntro {
     color: white;
     position: relative;
-    padding-left: 250px;
     top: 60%;
     width: 16em;   
     border-right: 2px solid rgba(255, 255, 255, 0.75);
@@ -92,7 +99,7 @@ img{
 
 @keyframes animated-text{
     from{width: 0;}
-    to{width: 940px;}
+    to{width: 710px;}
 }
 
 @keyframes animated-cursor{
