@@ -20,16 +20,9 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dep
 ```bash
 pip install -r requirements.txt
 ```
+Run flask
 
-## Usage
-
-
-Create a .env file using the example.env template
-
-
-Start flask development server
 ```bash
 $ export FLASK_ENV=development
 $ flask run
 ```
-
