@@ -15,7 +15,7 @@
 
             </p>
 
-            <form action="/register" method="POST">
+            <form action="{{ url_for('register') }}" method="POST">
                 <div class="form-floating mb-3">
                     <input id ="username" name ="username" type="text" class="form-control" id="floatingInput" placeholder="Username">
                     <label for="floatingInput">Username</label>
