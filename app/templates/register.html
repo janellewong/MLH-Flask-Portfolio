@@ -24,7 +24,9 @@
                     <input id ="password" name ="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Password</label>
                 </div>
-                <div class="msg">{{ msg }}</div>
+                {% if message %}
+                    <p>{{ message }}</p>
+                {% endif %}
             </form>
 
             </div>
