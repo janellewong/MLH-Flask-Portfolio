@@ -1,13 +1,13 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, send_from_directory
+from dotenv import load_dotenv
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask import request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-
+load_dotenv()
 app = Flask(__name__)
-
-
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}'.format(
     user=os.getenv('POSTGRES_USER'),
     passwd=os.getenv('POSTGRES_PASSWORD'),
@@ -19,7 +19,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-
 
 class UserModel(db.Model):
     __tablename__ = 'users'
@@ -35,26 +34,63 @@ class UserModel(db.Model):
         return f"<User {self.username}>"
 
 
+
 @app.route('/')
 def index():
-    return render_template('main.html', title="Janelle Wong | home", url=os.getenv("URL"), name="JANELLE")
+    return render_template('main.html', title="Janelle Wong | Portfolio", url=os.getenv("URL"))
 
-@app.route('/health', methods = ['GET'])
+@app.route('/health', methods=['GET'])
 def health():
-    return render_template('health.html', title="Janelle Wong | health", url=os.getenv("URL"))
+	return "200"
 
-@app.route('/register', methods = ['GET', 'POST'])
-def register():
+
+@app.route('/login', methods=('GET','POST'))
+def login():
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
-
         error = None
+        user = UserModel.query.filter_by(username=username).first()
 
         if not username:
             error = 'Username is required.'
         elif not password:
             error = 'Password is required.'
+
+        if user is None:
+            error = 'Incorrect username.'
+        elif not check_password_hash(user.password,
+    password):
+            error = 'Incorrect password.'
+
+        if error is not None:
+            return render_template('login.html', url=os.getenv("URL"), 
+                message=error), 418
+
+        if error is None:
+            return render_template('login.html', url=os.getenv("URL"), 
+                message="Login successful."), 200 
+        else:
+            return render_template('login.html', url=os.getenv("URL"), 
+                message=error), 418
+        
+
+    return render_template('login.html',url=os.getenv("URL"))
+
+
+
+@app.route('/register', methods=('GET','POST'))
+def register():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        error = None
+
+        if not username:
+            error = 'Username is required'
+        elif not password:
+            error = 'Password is required'
+
         elif UserModel.query.filter_by(username=username).first() is not None:
             error = f"User {username} is already registered."
 
@@ -63,46 +99,12 @@ def register():
             new_user = UserModel(username, generate_password_hash(password))
             db.session.add(new_user)
             db.session.commit()
-            message = f"User {username} created successfully."
-            return render_template('register.html', title="Janelle Wong | ", url=os.getenv("URL"), 
+            message = f"User {username} created successfully"
+            return render_template('register.html', url=os.getenv("URL"), 
                 message=message), 200
         else:
-            return render_template('register.html', title="Janelle Wong | ", url=os.getenv("URL"), 
-                message=message), 418
-
-    return render_template('register.html', title="Janelle Wong | register", url=os.getenv("URL"))
+            return error, 418
 
 
-@app.route('/login', methods = ['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-
-        username = request.form.get('username')
-        password = request.form.get('password')
-        user = UserModel.query.filter_by(username=username).first()
-        error = None
-
-        if not username:
-            error = 'Username is required.'
-        elif not password:
-            error = 'Password is required.'
-        
-        if error is not None:
-            return render_template('login.html', title="Janelle Wong | ", url=os.getenv("URL"), 
-                message=error), 418
-
-        if user is None:
-            error = 'Username does not exist.'
-        elif not check_password_hash(user.password, password):
-            error = 'Incorrect password.'
-
-        if error is None:
-            return render_template('login.html', title="Janelle Wong | ", url=os.getenv("URL"), 
-                message="Login successful."), 200 
-        else:
-            return render_template('login.html', title="Janelle Wong | ", url=os.getenv("URL"), 
-                message=error), 418
+    return render_template('register.html',url=os.getenv("URL"))
     
-    ## TODO: Return a login page
-    return render_template('login.html', title="Janelle Wong | login", url=os.getenv("URL"))
-
