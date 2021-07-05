@@ -15,7 +15,7 @@
 
             </p>
             
-            <form action="{{ url_for('login') }}" method="POST">
+            <form action="/login" method="POST">
                 <div class="form-floating mb-3">
                     <input id ="username" name ="username" type="text" class="form-control" id="floatingInput" placeholder="Username">
                     <label for="floatingInput">Username</label>
@@ -27,15 +27,16 @@
                 {% if message %}
                     <p>{{ message }}</p>
                 {% endif %}
-            </form>
+            
 
-            </div>
-            <br><br>
-            <div class=button-padding>
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Log In</button>
                 </div>
-            </div>
+                <br><br>
+                <div class=button-padding>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Log In</button>
+                    </div>
+                </div>
+            </form>
         </div>
 
     </div>
