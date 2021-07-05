@@ -1,8 +1,7 @@
 import os
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request
 from dotenv import load_dotenv
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask import request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -19,6 +18,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+
 
 class UserModel(db.Model):
     __tablename__ = 'users'
