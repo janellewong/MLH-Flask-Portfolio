@@ -14,7 +14,7 @@ services:
     db:
         image: postgres
         restart: always
-        ports:
+        ports: #take this out later!!!!! 
             - 127.0.0.1:5432:5432
         env_file:
             - .env
