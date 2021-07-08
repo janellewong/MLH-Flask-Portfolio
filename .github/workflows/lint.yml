@@ -1,6 +1,6 @@
 name: Lint
 
-on: 
+on:
     # Trigger the workflow on push or pull request,
     # but only for the main branch.
     push:
@@ -23,7 +23,7 @@ jobs:
               with:
                 python-version: 3.8
 
-            - name: Install Python dependencies 
+            - name: Install Python dependencies
               run: pip install black flake8
                 
             - name: Run linters
