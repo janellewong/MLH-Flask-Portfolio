@@ -33,11 +33,23 @@ jobs:
 
             - name: Print container information
               run: |
-                  ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && docker-compose ps'
+              ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && docker-compose ps'
+      
+            - name: Check out repository
+              uses: actions/checkout@v2
+              with:
+                repository: nicolesouydalay/flask-blog
+
             - name: Test deployment
               run: |
-                  chmod +x prod-test.sh
-                  ./prod-test.sh
-
-            - name: Discord Message
-              run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
+                chmod +x prod-test.sh
+                ./prod-test.sh
+                
+            - name: Check deployment failure
+              if: ${{ failure() }}
+              run: |
+                curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
+                
+            - name: Check deployment success
+              run: |
+                curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
