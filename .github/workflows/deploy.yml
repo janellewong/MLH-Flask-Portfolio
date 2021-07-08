@@ -28,8 +28,10 @@ jobs:
                   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
                   SSH_IP: ${{ secrets.SSH_IP }}
 
-            - name: Deploy Site
-              run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && git fetch && git reset --hard origin/master && docker-compose up -d --build'
+            - name: Deploy Website
+              run: >
+                ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && git fetch && git reset 
+                --hard origin/master && docker-compose up -d --build'
 
             - name: Print container information
               run: |
@@ -49,7 +51,7 @@ jobs:
               if: ${{ failure() }}
               run: |
                 curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
-                
+
             - name: Check deployment success
               run: |
                 curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
