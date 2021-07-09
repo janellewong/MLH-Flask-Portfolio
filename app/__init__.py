@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, send_from_directory, request
+from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
