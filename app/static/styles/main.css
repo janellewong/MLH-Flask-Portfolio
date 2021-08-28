@@ -169,9 +169,9 @@ img {
     position: center;
     z-index: 1;
     padding-top: 50px;
-    padding-right: 200px;
+    padding-right: 15vw;
     padding-bottom: 50px;
-    padding-left: 200px;
+    padding-left: 15vw;
 }
 
 #experience {
@@ -179,9 +179,9 @@ img {
     position: center;
     z-index: 1;
     padding-top: 50px;
-    padding-right: 200px;
+    padding-right: 15vw;
     padding-bottom: 50px;
-    padding-left: 200px;
+    padding-left: 15vw;
 }
 
 #projects {
@@ -189,9 +189,9 @@ img {
     position: center;
     z-index: 1;
     padding-top: 50px;
-    padding-right: 200px;
+    padding-right: 15vw;
     padding-bottom: 50px;
-    padding-left: 200px;
+    padding-left: 15vw;
 }
 
 #contact {
