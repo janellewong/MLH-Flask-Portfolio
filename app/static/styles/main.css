@@ -38,7 +38,7 @@ img{
 .hello-container {
     position: center;
     padding-left: 15vw;
-    padding-top: 300px;
+    padding-top: 150px;
     
 
 }
@@ -46,7 +46,7 @@ img{
 @media (max-width: 1450px) {
     .words {
         padding-top: 200px!important;
-        font-size: 0.5em!important;
+        font-size: 0.1em!important;
 
         /* hide text */
         /* text-indent: 100%;
@@ -57,9 +57,32 @@ img{
 
 @media (max-width: 1450px) {
     .hello-container {
+        position: left;
+        padding-top: 0px;
+        padding-left: 0px;
+        font-size: 0px!important;
+
+    }
+}
+
+
+.small-intro {
+    display:block;
+    /* hide text */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (max-width: 1450px) {
+    .small-intro {
         padding-top: 100px;
-        padding-left: 12vw;
-        font-size: 30px!important;
+        font-size: 0.5em!important;
+
+        /* unhide text */
+        text-indent: inherit;
+        white-space: inherit;
+        overflow: inherit;
 
     }
 }
@@ -151,6 +174,8 @@ img{
     top: 200px;
     list-style: none;
     right: 20%;
+    /* right: 30vw; */
+    /* padding-right: 10vw; */
     position: absolute;
     font-size: 20px;
     font-weight: 300;
