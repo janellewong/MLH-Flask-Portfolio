@@ -21,8 +21,14 @@ img{
 }
 
 #sliderContainer{
-    width: 500px;
+    width: 40vw;
     margin:auto; 
+}
+
+@media (max-width: 650px) {
+    #sliderContainer {
+        width: 100%;
+    }
 }
 
 .hello-container {
@@ -174,6 +180,13 @@ img {
     padding-left: 15vw;
 }
 
+@media (max-width: 650px) {
+    #about {
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
+}
+
 #experience {
     color: white;
     position: center;
@@ -184,6 +197,13 @@ img {
     padding-left: 15vw;
 }
 
+@media (max-width: 650px) {
+    #experience {
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
+}
+
 #projects {
     color: white;
     position: center;
@@ -192,6 +212,13 @@ img {
     padding-right: 15vw;
     padding-bottom: 50px;
     padding-left: 15vw;
+}
+
+@media (max-width: 650px) {
+    #projects {
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
 }
 
 #contact {
