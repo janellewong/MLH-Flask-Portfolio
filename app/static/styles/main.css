@@ -193,8 +193,6 @@ img{
         left: 50%; */
         /* position: sticky; */
         margin: auto;
-
-        position: fixed;
         left: 50%;
         transform: translate(-50%, -50%);
 
